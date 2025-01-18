@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Start Page Heading -->
+    <section class="cs_page_heading cs_bg_filed cs_center cs_primary_bg" style="background-color: #005ED1;">
+      <div class="container">
+        <h1 class="cs_white_color cs_semibold cs_white_color cs_mb_10 cs_fs_50">Contact</h1>
+        <ol class="breadcrumb cs_heading_font">
+          <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+          <li class="breadcrumb-item active">Contact</li>
+        </ol>
+      </div>
+    </section>
+    <!-- End Page Heading -->
+    <!-- Start Contact -->
+    <section>
+      <div class="cs_height_120 cs_height_lg_80"></div>
+      <div class="container">
+        <div class="row cs_gap_y_50">
+          <div class="col-lg-12">
+            <div class="cs_contact_desc">
+              <h3 class="cs_fs_24 cs_mb_33">Contact Information</h3>
+              <div class="cs_contact_info_grid">
+                <div class="cs_iconbox cs_style_5">
+                  <div class="cs_iconbox_icon cs_center cs_accent_bg_light cs_heading_color">
+                    <i class="fa-solid fa-phone-volume"></i></div>
+                    <div class="cs_iconbox_info">
+                      <h3 class="cs_fs_18 cs_semibold cs_mb_2">Phone Number :</h3>
+                      <a href="tel:+111(564)56825">{{contact.workshop_number}}</a><br>
+                      <a href="tel:+111(564)56826">{{contact.sales_number}}</a>
+                    </div>
+                </div>
+                <div class="cs_iconbox cs_style_5">
+                  <div class="cs_iconbox_icon cs_center cs_accent_bg_light cs_heading_color">
+                    <i class="fa-solid fa-envelope"></i></div>
+                    <div class="cs_iconbox_info">
+                      <h3 class="cs_fs_18 cs_semibold cs_mb_2">Email Address :</h3>
+                      <a href="mailTo:needhelpcripar@gmail.com">{{contact.mail}}</a>
+                    </div>
+                </div>
+                <div class="cs_iconbox cs_style_5">
+                  <div class="cs_iconbox_icon cs_center cs_accent_bg_light cs_heading_color">
+                    <i class="fa-solid fa-location-dot"></i></div>
+                    <div class="cs_iconbox_info">
+                      <h3 class="cs_fs_18 cs_semibold cs_mb_2">Our Address :</h3>
+                      <p class="mb-0">{{info.headquarter_address}}</p>
+                    </div>
+                </div>
+                <div class="cs_iconbox cs_style_5">
+                  <div class="cs_iconbox_icon cs_center cs_accent_bg_light cs_heading_color">
+                    <i class="fa-solid fa-clock"></i></div>
+                    <div class="cs_iconbox_info">
+                      <h3 class="cs_fs_18 cs_semibold cs_mb_2">Working Time :</h3>
+                      <p class="mb-0">{{contact.opening_day}} :</p>
+                      <p class="mb-0">{{contact.open_time}}</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="cs_height_44 cs_height_lg_30"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="cs_height_120 cs_height_lg_80"></div>
+    </section>
+    <!-- End Contact -->
+
+{% endblock %}

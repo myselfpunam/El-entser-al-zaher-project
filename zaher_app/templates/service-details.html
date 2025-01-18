@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Start Page Heading -->
+<section class="cs_page_heading cs_bg_filed cs_center cs_primary_bg" style="background-color: #005ED1;">
+  <div class="container">
+    <h1 class="cs_white_color cs_semibold cs_white_color cs_mb_10 cs_fs_50">{{service_details.name}} Details</h1>
+    <ol class="breadcrumb cs_heading_font">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active">{{service_details.name}} Details</li>
+    </ol>
+  </div>
+</section>
+<!-- End Page Heading -->
+<!-- Start Service Details -->
+<section>
+  <div class="cs_height_120 cs_height_lg_80"></div>
+  <div class="container">
+    <div class="row cs_row_gap_30 cs_gap_y_60">
+      <div class="col-xl-12 col-lg-12">
+        <div class="cs_service_details">
+          <img src="{{service_details.image.url}}" alt="Service Banner">
+          <h2>We give the best {{service_details.name}} Services</h2>
+          <p>{{service_details.description}}</p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="cs_height_120 cs_height_lg_80"></div>
+</section>
+<!-- End Service Details -->
+
+{% endblock %}

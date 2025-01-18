@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Start Page Heading -->
+    <section class="cs_page_heading cs_bg_filed cs_center cs_primary_bg" style="background-color: #005ED1;">
+      <div class="container">
+        <h1 class="cs_white_color cs_semibold cs_white_color cs_mb_10 cs_fs_50">Services</h1>
+        <ol class="breadcrumb cs_heading_font">
+          <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+          <li class="breadcrumb-item active">Services</li>
+        </ol>
+      </div>
+    </section>
+    <!-- End Page Heading -->
+    <!-- Start Services Section -->
+    <section>
+      <div class="cs_height_120 cs_height_lg_80"></div>
+      <div class="container">
+        <div class="row cs_row_gap_30 cs_gap_y_30">
+          {% for service in services %}
+          <div class="col-lg-4 col-md-6 pb-5">
+            <div class="cs_card cs_style_1">
+              <div class="cs_card_thumbnail">
+                <img src="{{service.image.url}}" alt="Service Image">
+              </div>
+              <div class="cs_card_info cs_white_bg cs_radius_10 text-center">
+                <br>
+                <br>
+                <br>
+                <h3 class="cs_card_title cs_fs_30 cs_mb_8">
+                  <a href="{% url 'serviceDetails' service.id %}">{{service.name}}</a>
+                </h3>
+                <p class="cs_card_subtitle cs_mb_18">{{service.description}}</p>
+                <a href="{% url 'serviceDetails' service.id %}" class="cs_text_btn cs_style_1 cs_bold cs_heading_color">
+                  <span class="cs_btn_text text-uppercase">Read More</span>
+                  <span class="cs_btn_icon cs_center">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="cs_height_120 cs_height_lg_80"></div>
+    </section>
+    <!-- End Services Section -->
+
+{% endblock %}
