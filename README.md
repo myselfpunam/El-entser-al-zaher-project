@@ -18,6 +18,6 @@ Backend: Django (Python)
 
 Frontend: HTML, CSS, Bootstrap
 
-Database: SQLite (or any other database used for the project)
+Database: SQLite 
 
 Version Control: Git and GitHub
